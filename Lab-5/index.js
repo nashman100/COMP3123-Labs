@@ -99,6 +99,6 @@ app.use((err,req,res,next) => {
 
 app.use('/', router);
 
-app.listen(process.env.port || 8081);
+app.listen(process.env.PORT || 8081);
 
-console.log('Web Server is listening at port '+ (process.env.port || 8081));
+console.log('Web Server is listening at port '+ (process.env.PORT || 8081));
