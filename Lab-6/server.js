@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const noteRoutes = require('./routes/NoteRoutes')
 
-const DB_URL = "mongodb+srv://nash:0ijgbktehkQey1Q4@comp3123.6x6ii.mongodb.net/Labs?retryWrites=true&w=majority&appName=COMP3123";
+const DB_URL = process.env.DB_URL;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
